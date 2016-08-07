@@ -1,0 +1,45 @@
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="https://material.angularjs.org/1.0.8/docs.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <!-- JS -->
+    <!-- load angular, ngRoute, ngAnimate -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+
+
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+
+
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="angular.js">
+
+    </script>
+</head>
+<body ng-app="MyApp">
+<div ng-controller="gridListDemoCtrl as vm" flex="" ng-cloak="" class="gridListdemoDynamicTiles" ng-app="MyApp">
+    <md-grid-list md-cols="2" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+
+        <md-grid-tile ng-repeat="tile in vm.tiles" md-rowspan="{{tile.span.row}}" md-colspan="{{tile.span.col}}" md-colspan-sm="1" md-colspan-xs="1" ng-class="tile.background">
+            <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+            <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</div>
+
+</body>
+</html>
